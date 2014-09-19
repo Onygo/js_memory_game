@@ -31,7 +31,6 @@ function onClickCard(e) {
     if (step === 0) {
         card1 = e.target;
         step++;
-        //console.log(card1);
     } else if (step === 1) {
         card2 = e.target;
         evaluateMatch();
@@ -40,6 +39,7 @@ function onClickCard(e) {
 
 function onSelectFieldSize(e) {
     populateGameField(e.target.value);
+    resetGame();
 }
 
 function populateGameField(fieldSize) {
@@ -72,14 +72,19 @@ function timer() {
 }
 
 function keepScore() {
-    
     field.addEventListener('click', onClickCard);
     score++;
-    console.log('Score: ' + score);
+
+    document.getElementById('succes').innerHTML = 'Score: ' + score;
 }
 
 function resetGame() {
+    step = 0;
+    timesTried = 0;
+    score = 0;
     
+    document.getElementById('tries').innerHTML = 'Aantal pogingen: ' + timesTried;
+    document.getElementById('succes').innerHTML = 'Score: ' + score;
 }
 
 function evaluateMatch() {
@@ -87,9 +92,11 @@ function evaluateMatch() {
     
     var nameCard1 = card1.parentElement.getAttribute('name');
     var nameCard2 = card2.parentElement.getAttribute('name');
+    
     step = 0;
     timesTried++;
-    console.log('Times tried: ' + timesTried);
+    
+    document.getElementById('tries').innerHTML = 'Aantal pogingen: ' + timesTried;
     
     if (nameCard1 === nameCard2) {
         keepScore();
