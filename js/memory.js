@@ -24,8 +24,6 @@ select_fieldsize.addEventListener('change', onSelectFieldSize);
 field.addEventListener('click', onClickCard);
 
 function onClickCard(e) {
-    //console.log(e.target.parentElement);
-    
     e.target.setAttribute('class', 'uncovered');
         
     if (step === 0) {
@@ -36,9 +34,6 @@ function onClickCard(e) {
         card2 = e.target;
         evaluateMatch();
     }
-    
-    //e.target.style.backgroundColor = 'transparent';
-    //e.target.style.backgroundImage = 'none'; 
 }
 
 function onSelectFieldSize(e) {
