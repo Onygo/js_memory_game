@@ -17,17 +17,19 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
                 <div class="col-md-6">
                     <h1>Cursus JavaScript <small>dag 3</small></h1>
                     <h2><small>Memory Game</small></h2>
                     
+                    <hr>
+                    
                     <output id="finished"></output>
 
                     <div id="intro">
-                        <div id="introtext"></div>
+                        <div id="introtext"><h4>Selecteer het aantal kaarten voor je Memory Game</h4></div>
                         <select id="select_fieldsize" class="form-control">
-                            <option selected disabled>Selecteer het aantal kaarten</option>
+                            <option selected disabled>Aantal kaarten...</option>
                             <option value="2">4 kaarten</option>
                             <option value="3">8 kaarten</option>
                             <option value="4">16 kaarten</option>
@@ -39,12 +41,12 @@
 
                     </div>
                 </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
             </div>
-            <hr>
             <div class="row">
-                <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
                 <div class="col-md-2">
+                    <hr>
                     <div id="result-col">
                         <div class="panel panel-default">
                             <div class="panel-heading text-center">Pogingen</div>
@@ -55,6 +57,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
+                    <hr>
                     <div id="success-col">
                         <div class="panel panel-default">
                             <div class="panel-heading text-center">Score</div>
@@ -65,6 +68,7 @@
                     </div>
                 </div>
                 <div class="col-md-2">
+                    <hr>
                     <div id="timer-col">
                         <div class="panel panel-default">
                             <div class="panel-heading text-center">Timer</div>
@@ -74,7 +78,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-3"></div>
             </div>
         </div>
         
