@@ -57,7 +57,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center">Score</div>
                             <div class="panel-body">
-                                <output id="succes" class="output-text text-center">0</output>
+                                <output id="success" class="output-text text-center">0</output>
                             </div>
                         </div>
                     </div>

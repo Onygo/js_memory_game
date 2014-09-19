@@ -40,8 +40,8 @@ function onClickCard(e) {
 }
 
 function onSelectFieldSize(e) {
-    populateGameField(e.target.value);
     resetGame();
+    populateGameField(e.target.value);
 }
 
 function populateGameField(fieldSize) {
@@ -70,7 +70,7 @@ function timer() {
 
 function keepScore() {
     score++;
-    document.getElementById('succes').innerHTML = score;
+    document.getElementById('success').innerHTML = score;
     //console.log('Resterende kaarten: ' + cardsLeft);
     
     if (cardsLeft === 0) {
@@ -85,7 +85,6 @@ function resetGame() {
     step = 0;
     timesTried = 0;
     score = 0;
-    success = '';
     tries.innerHTML = timesTried;
     success.innerHTML = score;
 }
