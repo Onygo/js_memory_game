@@ -27,10 +27,12 @@
                     <div id="intro">
                         <div id="introtext"></div>
                         <select id="select_fieldsize" class="form-control">
-                            <option selected disabled>Select Field Size</option>
-                            <option value="4">4 x 4</option>
-                            <option value="5">5 x 5</option>
-                            <option value="6">6 x 6</option>
+                            <option selected disabled>Selecteer het aantal kaarten</option>
+                            <option value="2">4 kaarten</option>
+                            <option value="3">8 kaarten</option>
+                            <option value="4">16 kaarten</option>
+                            <option value="5">24 kaarten</option>
+                            <option value="6">30 kaarten</option>
                         </select>
                     </div>
                     <div id="field">
