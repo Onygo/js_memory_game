@@ -70,7 +70,7 @@ function timer() {
 
 function keepScore() {
     score++;
-    document.getElementById('succes').innerHTML = 'Score: ' + score;
+    document.getElementById('succes').innerHTML = score;
     //console.log('Resterende kaarten: ' + cardsLeft);
     
     if (cardsLeft === 0) {
@@ -86,8 +86,8 @@ function resetGame() {
     timesTried = 0;
     score = 0;
     success = '';
-    tries.innerHTML = 'Aantal pogingen: ' + timesTried;
-    success.innerHTML = 'Score: ' + score;
+    tries.innerHTML = timesTried;
+    success.innerHTML = score;
 }
 
 function evaluateMatch() {
@@ -97,7 +97,7 @@ function evaluateMatch() {
     
     step = 0;
     timesTried++;
-    tries.innerHTML = 'Aantal pogingen: ' + timesTried;
+    tries.innerHTML = timesTried;
     
     if (nameCard1 === nameCard2) {
         cardsLeft -= 2;

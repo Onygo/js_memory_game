@@ -16,28 +16,64 @@
     <body>
         
         <div class="container">
-            <h1>Cursus JavaScript <small>dag 3</small></h1>
-            <h2><small>Memory Game</small></h2>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <h1>Cursus JavaScript <small>dag 3</small></h1>
+                    <h2><small>Memory Game</small></h2>
+                    
+                    <output id="finished"></output>
 
-            <div id="intro">
-                <div id="introtext"></div>
-                <select id="select_fieldsize">
-                    <option selected disabled>Select Field Size</option>
-                    <option value="4">4 x 4</option>
-                    <option value="5">5 x 5</option>
-                    <option value="6">6 x 6</option>
-                </select>
+                    <div id="intro">
+                        <div id="introtext"></div>
+                        <select id="select_fieldsize" class="form-control">
+                            <option selected disabled>Select Field Size</option>
+                            <option value="4">4 x 4</option>
+                            <option value="5">5 x 5</option>
+                            <option value="6">6 x 6</option>
+                        </select>
+                    </div>
+                    <div id="field">
+
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
             </div>
-            <div id="field">
-                
+            <hr>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <div id="result-col">
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center">Pogingen</div>
+                            <div class="panel-body">
+                                <output id="tries" class="output-text text-center">0</output>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div id="success-col">
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center">Score</div>
+                            <div class="panel-body">
+                                <output id="succes" class="output-text text-center">0</output>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div id="timer-col">
+                        <div class="panel panel-default">
+                            <div class="panel-heading text-center">Timer</div>
+                            <div class="panel-body">
+                                <output id="timer" class="output-text text-center">-</output>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
             </div>
-            <div id="result">
-                <output id="tries"></output>
-                <output id="succes"></output>
-                <output id="timer"></output>
-                <output id="finished"></output>
-            </div>
-            
         </div>
         
         <script src="js/cardSet.js"></script>

@@ -1,8 +1,7 @@
 #field {
     margin: 20px 0;
-    float: left;
     background-color: #ffffff;
-    padding: 0px;
+    padding: 0;
 }
 
 #field div {
@@ -25,4 +24,10 @@
 
 .uncovered {
     background-color: transparent;
+}
+
+.output-text {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0;
 }
