@@ -19,6 +19,8 @@ var timer = document.getElementById('timer');
 var card1;
 var card2;
 var step = 0;
+var timesTried = 0;
+var score = 0;
     
 select_fieldsize.addEventListener('change', onSelectFieldSize);
 field.addEventListener('click', onClickCard);
@@ -70,7 +72,10 @@ function timer() {
 }
 
 function keepScore() {
-    console.log('Goed!');
+    
+    field.addEventListener('click', onClickCard);
+    score++;
+    console.log('Score: ' + score);
 }
 
 function resetGame() {
@@ -83,6 +88,8 @@ function evaluateMatch() {
     var nameCard1 = card1.parentElement.getAttribute('name');
     var nameCard2 = card2.parentElement.getAttribute('name');
     step = 0;
+    timesTried++;
+    console.log('Times tried: ' + timesTried);
     
     if (nameCard1 === nameCard2) {
         keepScore();
