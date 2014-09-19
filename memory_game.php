@@ -19,8 +19,7 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <h1>Cursus JavaScript <small>dag 3</small></h1>
-                    <h2><small>Memory Game</small></h2>
+                    <h1>Memory Game <small>Javascript</small></h1>
                     
                     <hr>
                     
