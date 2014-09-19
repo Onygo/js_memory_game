@@ -15,6 +15,7 @@ var allPictures = ['horse','mouse','dog','cat','goose','pig','cow','puppy','duck
 var cardOffset = 100;
 
 function Card() {
+    this.id;
     this.name;
     this.picture;
     this.x;
@@ -59,7 +60,9 @@ function CardSet(fieldsize) {
         for (var y = 0; y <= numberOfPictures; y++) {
             if (currentCard < myDeck.length) {
                 var newCard = new Card();
-                var cardName = String('card' + currentCard);
+                var cardID = String('card' + currentCard);
+                var cardName = myDeck[currentCard];
+                newCard.id = cardID;
                 newCard.name = cardName;
                 newCard.picture = myDeck[currentCard];
                 newCard.x = (x - 1) * cardOffset + 10;
