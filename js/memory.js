@@ -15,12 +15,14 @@ var select_fieldsize = document.getElementById('select_fieldsize');
 var field = document.getElementById('field');
 var tries = document.getElementById('tries');
 var success = document.getElementById('success');
+var finished = document.getElementById('finished');
 var timer = document.getElementById('timer');
 var card1;
 var card2;
 var step = 0;
 var timesTried = 0;
 var score = 0;
+var cardsLeft = 0;
     
 select_fieldsize.addEventListener('change', onSelectFieldSize);
 field.addEventListener('click', onClickCard);
@@ -44,24 +46,19 @@ function onSelectFieldSize(e) {
 
 function populateGameField(fieldSize) {
     var myCardSet = new CardSet(fieldSize);
-    
+    cardsLeft = myCardSet.length;
     field.innerHTML = '';
+    
     for (var i = 0; i < myCardSet.length; i++) {
         var newCard = document.createElement('div');
-        
         var cover = document.createElement('div');
-        cover.setAttribute('class', 'covered');
-        
         var cardID = myCardSet[i].id;
         var cardName = myCardSet[i].name;
-        
         var imgURL = 'url(img/' + myCardSet[i].picture + '.jpg)';
-        
+        cover.setAttribute('class', 'covered');
         newCard.setAttribute('id', cardID);
         newCard.setAttribute('name', cardName);
-        
         newCard.style.backgroundImage = imgURL;
-        
         newCard.appendChild(cover);
         field.appendChild(newCard);
     }
@@ -72,33 +69,38 @@ function timer() {
 }
 
 function keepScore() {
-    field.addEventListener('click', onClickCard);
     score++;
-
     document.getElementById('succes').innerHTML = 'Score: ' + score;
+    //console.log('Resterende kaarten: ' + cardsLeft);
+    
+    if (cardsLeft === 0) {
+        field.removeEventListener('click', onClickCard);
+        finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd! Je hebt alle kaarten omgedraait in ' + timesTried + ' zetten.<div>';
+    } else {
+        field.addEventListener('click', onClickCard);
+    }
 }
 
 function resetGame() {
     step = 0;
     timesTried = 0;
     score = 0;
-    
-    document.getElementById('tries').innerHTML = 'Aantal pogingen: ' + timesTried;
-    document.getElementById('succes').innerHTML = 'Score: ' + score;
+    success = '';
+    tries.innerHTML = 'Aantal pogingen: ' + timesTried;
+    success.innerHTML = 'Score: ' + score;
 }
 
 function evaluateMatch() {
     field.removeEventListener('click', onClickCard);
-    
     var nameCard1 = card1.parentElement.getAttribute('name');
     var nameCard2 = card2.parentElement.getAttribute('name');
     
     step = 0;
     timesTried++;
-    
-    document.getElementById('tries').innerHTML = 'Aantal pogingen: ' + timesTried;
+    tries.innerHTML = 'Aantal pogingen: ' + timesTried;
     
     if (nameCard1 === nameCard2) {
+        cardsLeft -= 2;
         keepScore();
     } else {
         setTimeout( function () { nextMove(); }, 2000 );

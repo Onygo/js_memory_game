@@ -35,6 +35,7 @@
                 <output id="tries"></output>
                 <output id="succes"></output>
                 <output id="timer"></output>
+                <output id="finished"></output>
             </div>
             
         </div>
