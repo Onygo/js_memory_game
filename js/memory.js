@@ -43,10 +43,9 @@ function onClickCard(e) {
 }
 
 function onSelectFieldSize(e) {
-    clearInterval(timer);
+    resetGame();
     timer = setInterval(function() { myTimer(); },1000);
     
-    resetGame();
     populateGameField(e.target.value);
 }
 
@@ -93,13 +92,14 @@ function keepScore() {
     if (cardsLeft === 0) {
         clearInterval(timer);
         field.removeEventListener('click', onClickCard);
-        finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd! Je hebt alle kaarten omgedraait in ' + timesTried + ' zetten.<div>';
+        finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd!<br />Je hebt alle kaarten omgedraait in ' + timesTried + ' zetten. <br />Tijd: ' + minutes + ' minuten en ' + seconds + ' seconden.<div>';
     } else {
         field.addEventListener('click', onClickCard);
     }
 }
 
 function resetGame() {
+    clearInterval(timer);
     step = 0;
     timesTried = 0;
     score = 0;

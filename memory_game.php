@@ -2,7 +2,7 @@
 <html>
     
     <head>
-        <title>Cursus JavaScript</title>
+        <title>Memory Game - JavaScript</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         
