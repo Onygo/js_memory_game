@@ -81,6 +81,8 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
+                    <a href="https://github.com/Onygo/js_memory_game"><button type="button" class="btn btn-primary">Source Code on GitHub</button></a>
+                    <hr>
                     <?php include_once 'ads.php'; ?>
                 </div>
             </div>
