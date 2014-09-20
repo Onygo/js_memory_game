@@ -50,6 +50,9 @@ function onSelectFieldSize(e) {
 }
 
 function populateGameField(fieldSize) {
+    field.addEventListener('click', onClickCard);
+    field.style.display = "block";
+    finished.innerHTML = '';
     var myCardSet = new CardSet(fieldSize);
     cardsLeft = myCardSet.length;
     field.innerHTML = '';
@@ -92,7 +95,12 @@ function keepScore() {
     if (cardsLeft === 0) {
         clearInterval(timer);
         field.removeEventListener('click', onClickCard);
+<<<<<<< HEAD
+        field.style.display = "none";
         finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd!<br />Je hebt alle kaarten omgedraait in ' + timesTried + ' zetten. <br />Tijd: ' + minutes + ' minuten en ' + seconds + ' seconden.<div>';
+=======
+>>>>>>> FETCH_HEAD
+        finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd!<br />Je hebt alle kaarten omgedraaid in ' + timesTried + ' zetten. <br />Tijd: ' + minutes + ' minuten en ' + seconds + ' seconden.<div>';
     } else {
         field.addEventListener('click', onClickCard);
     }
