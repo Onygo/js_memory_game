@@ -92,7 +92,7 @@ function keepScore() {
     if (cardsLeft === 0) {
         clearInterval(timer);
         field.removeEventListener('click', onClickCard);
-        finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd!<br />Je hebt alle kaarten omgedraait in ' + timesTried + ' zetten. <br />Tijd: ' + minutes + ' minuten en ' + seconds + ' seconden.<div>';
+        finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd!<br />Je hebt alle kaarten omgedraaid in ' + timesTried + ' zetten. <br />Tijd: ' + minutes + ' minuten en ' + seconds + ' seconden.<div>';
     } else {
         field.addEventListener('click', onClickCard);
     }
