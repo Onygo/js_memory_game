@@ -29,11 +29,11 @@
                         <div id="introtext"><h4>Selecteer het aantal kaarten voor je Memory Game</h4></div>
                         <select id="select_fieldsize" class="form-control">
                             <option selected disabled>Aantal kaarten...</option>
-                            <option value="2">4 kaarten</option>
-                            <option value="3">8 kaarten</option>
-                            <option value="4">16 kaarten</option>
-                            <option value="5">24 kaarten</option>
-                            <option value="6">30 kaarten</option>
+                            <option value="2">4 kaarten (2x2)</option>
+                            <option value="3">8 kaarten (3x3)</option>
+                            <option value="4">16 kaarten (4x4)</option>
+                            <option value="5">24 kaarten (5x5)</option>
+                            <option value="6">36 kaarten (6x6)</option>
                         </select>
                     </div>
                     <div id="field">
@@ -72,7 +72,7 @@
                         <div class="panel panel-default">
                             <div class="panel-heading text-center">Timer</div>
                             <div class="panel-body">
-                                <output id="timer" class="output-text text-center">-</output>
+                                <output id="timer" class="output-text text-center">0 : 00</output>
                             </div>
                         </div>
                     </div>

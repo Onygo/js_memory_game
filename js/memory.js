@@ -16,13 +16,16 @@ var field = document.getElementById('field');
 var tries = document.getElementById('tries');
 var success = document.getElementById('success');
 var finished = document.getElementById('finished');
-var timer = document.getElementById('timer');
+var timer_txt = document.getElementById('timer');
 var card1;
 var card2;
 var step = 0;
 var timesTried = 0;
 var score = 0;
 var cardsLeft = 0;
+var timer;
+var minutes;
+var seconds;
     
 select_fieldsize.addEventListener('change', onSelectFieldSize);
 field.addEventListener('click', onClickCard);
@@ -40,6 +43,9 @@ function onClickCard(e) {
 }
 
 function onSelectFieldSize(e) {
+    clearInterval(timer);
+    timer = setInterval(function() { myTimer(); },1000);
+    
     resetGame();
     populateGameField(e.target.value);
 }
@@ -64,16 +70,28 @@ function populateGameField(fieldSize) {
     }
 }
 
-function timer() {
-    
+function myTimer() {
+    seconds++;
+    if (seconds === 60) {
+        seconds = 0;
+        minutes++;	
+    } else if (seconds < 10) {
+        timer_txt.innerHTML = minutes + " : 0" + seconds;
+    }
+    else {
+        timer_txt.innerHTML = minutes + " : " + seconds;
+    }
 }
 
 function keepScore() {
     score++;
     document.getElementById('success').innerHTML = score;
-    //console.log('Resterende kaarten: ' + cardsLeft);
+    
+    card1.parentElement.style.visibility = "hidden";
+    card2.parentElement.style.visibility = "hidden";
     
     if (cardsLeft === 0) {
+        clearInterval(timer);
         field.removeEventListener('click', onClickCard);
         finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd! Je hebt alle kaarten omgedraait in ' + timesTried + ' zetten.<div>';
     } else {
@@ -85,6 +103,8 @@ function resetGame() {
     step = 0;
     timesTried = 0;
     score = 0;
+    minutes = 0;
+    seconds = 0;
     tries.innerHTML = timesTried;
     success.innerHTML = score;
 }
