@@ -131,9 +131,9 @@ function evaluateMatch() {
     
     if (nameCard1 === nameCard2 && idCard1 !== idCard2) {
         cardsLeft -= 2;
-        keepScore();
+        setTimeout( function () { keepScore(); }, 1500 );
     } else {
-        setTimeout( function () { nextMove(); }, 2000 );
+        setTimeout( function () { nextMove(); }, 1500 );
     }
 }
 
