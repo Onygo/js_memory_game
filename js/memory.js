@@ -122,12 +122,14 @@ function evaluateMatch() {
     field.removeEventListener('click', onClickCard);
     var nameCard1 = card1.parentElement.getAttribute('name');
     var nameCard2 = card2.parentElement.getAttribute('name');
+    var idCard1 = card1.parentElement.getAttribute('id');
+    var idCard2 = card2.parentElement.getAttribute('id');
     
     step = 0;
     timesTried++;
     tries.innerHTML = timesTried;
     
-    if (nameCard1 === nameCard2) {
+    if (nameCard1 === nameCard2 && idCard1 !== idCard2) {
         cardsLeft -= 2;
         keepScore();
     } else {
