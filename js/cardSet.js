@@ -12,7 +12,7 @@
 
 var myDeck;
 var allPictures = ['horse','mouse','dog','calf','cat','goose','pig','cow','puppy','duck','kitten','goat','sheep','rooster','hen','piglet','foal','lamb'];
-var cardOffset = 100;
+var cardOffset = 120;
 
 function Card() {
     this.id;

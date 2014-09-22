@@ -17,6 +17,8 @@ var tries = document.getElementById('tries');
 var success = document.getElementById('success');
 var finished = document.getElementById('finished');
 var timer_txt = document.getElementById('timer');
+var board_container = document.getElementById("board");
+
 var card1;
 var card2;
 var step = 0;
@@ -69,6 +71,9 @@ function populateGameField(fieldSize) {
         newCard.style.backgroundImage = imgURL;
         newCard.appendChild(cover);
         field.appendChild(newCard);
+
+        var board_container_width = (cardOffset*fieldSize) + "px";
+        board_container.style.width = board_container_width; 
     }
 }
 
@@ -96,7 +101,6 @@ function keepScore() {
         clearInterval(timer);
         field.removeEventListener('click', onClickCard);
         field.style.display = "none";
-        finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd!<br />Je hebt alle kaarten omgedraait in ' + timesTried + ' zetten. <br />Tijd: ' + minutes + ' minuten en ' + seconds + ' seconden.<div>';
         finished.innerHTML = '<div class="alert alert-success" role="alert">Gefeliciteerd!<br />Je hebt alle kaarten omgedraaid in ' + timesTried + ' zetten. <br />Tijd: ' + minutes + ' minuten en ' + seconds + ' seconden.<div>';
     } else {
         field.addEventListener('click', onClickCard);

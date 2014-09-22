@@ -17,15 +17,14 @@
         
         <div class="container">
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <h1>Memory Game <small>Javascript</small></h1>
                     
                     <hr>
                     
                     <output id="finished"></output>
 
-                    <div id="intro">
+                    <div id="intro" class="form-inline">
                         <div id="introtext"><h4>Selecteer het aantal kaarten voor je Memory Game</h4></div>
                         <select id="select_fieldsize" class="form-control">
                             <option selected disabled>Aantal kaarten...</option>
@@ -36,15 +35,14 @@
                             <option value="6">36 kaarten (6x6)</option>
                         </select>
                     </div>
-                    <div id="field">
-
+                    <div id="board" class="cf">
+                        <div id="field">
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
             </div>
             <div class="row">
-                <div class="col-md-3"></div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <hr>
                     <div id="result-col">
                         <div class="panel panel-default">
@@ -55,7 +53,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <hr>
                     <div id="success-col">
                         <div class="panel panel-default">
@@ -66,7 +64,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-4">
                     <hr>
                     <div id="timer-col">
                         <div class="panel panel-default">
@@ -77,7 +75,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3"></div>
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
