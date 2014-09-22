@@ -11,7 +11,8 @@
 "use strict";
 
 var myDeck;
-var allPictures = ['horse','mouse','dog','calf','cat','goose','pig','cow','puppy','duck','kitten','goat','sheep','rooster','hen','piglet','foal','lamb'];
+var allPictures = ['8c1f958e-fc6e-4a49-b2e2-002ee08b1cf2','c1a4247c-cc12-43ec-9faa-df95994aa562','8ab4d0fe-ac0b-4e9a-a04d-0f961c23792b','e7a1571d-116a-4fc5-a82f-67728dff92c6','766abd1d-d699-4fc8-8a85-88ce24c6aa0c','de58333b-a72f-4a49-80a2-67f7d9c8565b','7ca0d094-19a8-440e-9cdb-5d62f2113f0e','d1d18fba-282e-4fe3-82e3-05618554f14e','94d1fdcf-59cc-45cd-a5f6-2326a85a5764','2379fd48-cb25-4965-b398-343b50b4ce79','45cf3223-a2fd-409f-a5bb-3639ba581621','c871101c-460c-461b-ae32-0bb9de67cbc2','89f6821c-3871-41ea-88ba-74130faefe16','33f786bf-f0ac-4939-a1d6-d5d7e9f4fb04','05a5b20d-55d2-4b60-a513-e08534b94fac','4b2f00ee-6b75-4301-a0c7-1fe8b50173f4','95b88440-316b-4cef-9b22-5975bda43596','b0479cfc-3d8b-4691-893e-27d2faf7164d','24f1c378-6c82-4779-b935-ce8f0d07198e','a7c9ebde-c916-4fbb-a535-0d33ca894b71'
+];
 var cardOffset = 120;
 
 function Card() {
